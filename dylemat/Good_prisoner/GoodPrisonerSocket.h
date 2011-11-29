@@ -1,3 +1,5 @@
+//GoodPrisonerSocketScoket.h
+
 #pragma once
 #include <iostream>
 #include <WinSock2.h>
@@ -10,7 +12,6 @@ protected:
 	WSADATA wsaData;
 	SOCKET mySocket;
 	SOCKET myBackup;
-	SOCKET acceptSocket;
 	sockaddr_in myAddress;
 public:
 	Socket();
@@ -22,11 +23,10 @@ public:
 
 };
 
-
 class ClientSocket : public Socket
 {
 public:
 	void ConnectToServer(char*, int);
 };
-
-
+ 
+ 
